@@ -5,9 +5,9 @@
   "require": {
     "php": "^7.4",
     "yxvt/beermission": "^1.0.0",
-    "illuminate/container": "^8.0@dev",
-    "illuminate/contracts": "^8.0@dev",
-    "illuminate/database": "^8.0@dev"
+    "illuminate/container": "^5.8|^6.0|^7.0|^8.0",
+    "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0",
+    "illuminate/database": "^5.8|^6.0|^7.0|^8.0"
   },
   "require-dev": {
     "laravel/tinker": "^2.4",
