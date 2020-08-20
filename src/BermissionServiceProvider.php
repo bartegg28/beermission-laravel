@@ -19,7 +19,7 @@ class BermissionServiceProvider extends ServiceProvider
             ]);
 
             $this->publishes([
-                __DIR__ . '/../database/migrations/create_beermission_grants_table.php' => $this->getMigrationFileName($fs),
+                __DIR__ . '/../database/migrations/create_beermission_table.php' => $this->getMigrationFileName($fs),
             ], 'migrations');
         }
 
@@ -38,8 +38,8 @@ class BermissionServiceProvider extends ServiceProvider
         $migrationsPath = $this->app->databasePath() . DIRECTORY_SEPARATOR . 'migrations' . DIRECTORY_SEPARATOR;
 
         return Collection::make($migrationsPath)
-            ->flatMap(fn($p): array => $filesystem->glob($migrationsPath . '*_create_beermission_tables.php'))
-            ->push($this->app->databasePath() . "/migrations/{$timestamp}_create_beermission_tables.php")
+            ->flatMap(fn($p): array => $filesystem->glob($migrationsPath . '*_create_beermission_table.php'))
+            ->push($this->app->databasePath() . "/migrations/{$timestamp}_create_beermission_table.php")
             ->first();
     }
 }
